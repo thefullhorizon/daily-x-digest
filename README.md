@@ -1,7 +1,15 @@
 # daily-x-digest
-Gemini Spark + Github + Vercel 搭建一个X信息摘要项目
 
-V0.0.1版本的构建逻辑
+这个项目仅用来测试Gemini Spark的产品能力. 搭建了一个X获取感兴趣信息并做摘要日报项目
+
+目前的效果是: 每天7点生成日报数据, 10mins后会自动部署到生产环境
+
+特殊说明:
+因为目前Gemini Spark 没有像ChatGPT那样的直接在线部署网页应用的能力, 这里直接自己上手补上这一点,
+整体实现技术栈是: Gemini Spark + Drive + Github + Github Action +Vercel
+
+## 版本迭代
+### V0.0.1 初始构建项目
 每天早上7点,执行以下任务:
 收集信息: 只从X上收集最近一天的关于AI(AI产品、AI相关的技术、AI相关的观点)、具身智能、金融股市(美股、加密货币、金融政策)、风投基金(Y16z、sequoia、YC)、
 信息加工: 整理成一份信息摘要, 并按重要性进行打分
