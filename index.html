@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>X 科技与金融前沿情报 · 晨报-Demo (2026-09-20)</title>
+  <title>X 科技与金融前沿情报 · 晨报</title>
   <style>
     :root {
       --bg-base: #0a0d14;
@@ -208,24 +208,24 @@
   <div class="container">
     <header>
       <div class="badge">⚡ 每日 07:00 自动研报 · X 监控专线</div>
-      <h1>X 科技与金融前沿情报 · 晨报-Demo</h1>
-      <div class="subtitle">采集窗口：最近 24 小时 · 覆盖 AI 前沿、具身智能、金融宏观与顶级风险投资基金</div>
+      <h1 id="header-title">X 科技与金融前沿情报 · 晨报</h1>
+      <div class="subtitle" id="header-subtitle">正在同步最新数据...</div>
       <div class="stats-grid">
         <div class="stat-item">
           <div class="stat-label">总监控条目</div>
-          <div class="stat-value">6 篇精选</div>
+          <div class="stat-value" id="stat-total">--</div>
         </div>
         <div class="stat-item">
           <div class="stat-label">S 级核心事件</div>
-          <div class="stat-value" style="color: #f87171;">4 项</div>
+          <div class="stat-value" id="stat-s" style="color: #f87171;">--</div>
         </div>
         <div class="stat-item">
           <div class="stat-label">A 级关键突破</div>
-          <div class="stat-value" style="color: #60a5fa;">2 项</div>
+          <div class="stat-value" id="stat-a" style="color: #60a5fa;">--</div>
         </div>
         <div class="stat-item">
           <div class="stat-label">平均重要性</div>
-          <div class="stat-value" style="color: #fbbf24;">9.1 / 10</div>
+          <div class="stat-value" id="stat-avg" style="color: #fbbf24;">--</div>
         </div>
       </div>
     </header>
@@ -240,174 +240,59 @@
       </div>
     </div>
 
-    <div class="feed-grid">
-      <!-- Card 1: AI Safety Debate -->
-      <div class="card" data-category="ai">
-        <div>
-          <div class="card-top">
-            <span class="card-category cat-ai">AI 核心观点</span>
-            <span class="score-badge s-tier">★ 9.6 · S级核心</span>
-          </div>
-          <h2 class="card-title">AI 巨头 CEO 罕见同频讨论开发节奏与监管自律边界</h2>
-          <div class="tags">
-            <span class="tag">#OpenAI</span>
-            <span class="tag">#Anthropic</span>
-            <span class="tag">#xAI</span>
-            <span class="tag">#DeepMind</span>
-            <span class="tag">#AISafety</span>
-          </div>
-          <div class="card-body">
-            <ul>
-              <li><strong>高层共识探讨：</strong>Anthropic CEO Dario Amodei 提出前沿模型安全担忧后，Sam Altman 与 Elon Musk 在 X 互动发声，探讨在激烈竞速中建立自愿安全红线的必要性。</li>
-              <li><strong>反垄断边界澄清：</strong>法律专家在 X 指出，行业自律协调防范公共风险不构成垄断，为跨实验室测试合作消除疑虑。</li>
-              <li><strong>资本预期绑定：</strong>分析师指出当前讨论与多家主要实验室推进上市及资本重组进程高度关联。</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card-footer">
-          <span>信源：X 高管账号 / 行业综述</span>
-          <a class="source-link" href="https://www.theguardian.com/technology/2026/sep/13/openai-sam-altman-elon-musk-back-anthropic-calls-brakes-ai-development" target="_blank">查看报道 →</a>
-        </div>
-      </div>
-
-      <!-- Card 2: Embodied AI -->
-      <div class="card" data-category="robot">
-        <div>
-          <div class="card-top">
-            <span class="card-category cat-robot">具身智能</span>
-            <span class="score-badge">★ 8.8 · A级突破</span>
-          </div>
-          <h2 class="card-title">Tesla Optimus 展示端到端神经网络分拣视频，马斯克定调“Progress”</h2>
-          <div class="tags">
-            <span class="tag">#TeslaOptimus</span>
-            <span class="tag">#EndToEnd</span>
-            <span class="tag">#PhysicalAI</span>
-            <span class="tag">#VLA</span>
-          </div>
-          <div class="card-body">
-            <ul>
-              <li><strong>端到端网络突破：</strong>Optimus 演示采用完全基于视频输入到控制输出（Video-in, Controls-out）的神经网络，自主完成非规则物体分拣与动态校准。</li>
-              <li><strong>通用物理 AI：</strong>学术界在 X 热议其摆脱逐层启发式代码的路径，标志视觉-语言-动作一体化向工业生产环境迈进。</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card-footer">
-          <span>信源：Tesla Optimus 官方 X 账号</span>
-          <a class="source-link" href="https://www.business-standard.com/technology/tech-news/tesla-ai-can-do-yoga-and-other-activities-musk-reacts-to-video-shared-on-x-123092600416_1.html" target="_blank">查看报道 →</a>
-        </div>
-      </div>
-
-      <!-- Card 3: Fed Rate Decision -->
-      <div class="card" data-category="finance">
-        <div>
-          <div class="card-top">
-            <span class="card-category cat-finance">金融政策 · 美股</span>
-            <span class="score-badge s-tier">★ 9.8 · S级宏观</span>
-          </div>
-          <h2 class="card-title">美联储加息 25bp 至 3.75%–4.00%，通胀粘性引发美股震荡</h2>
-          <div class="tags">
-            <span class="tag">#美联储</span>
-            <span class="tag">#利率决议</span>
-            <span class="tag">#SP500</span>
-            <span class="tag">#美股</span>
-          </div>
-          <div class="card-body">
-            <ul>
-              <li><strong>决议定调：</strong>美联储宣布上调基准利率 25 个基点至 3.75%–4.00%，点阵图显示多数官员预计年内通胀仍存韧性。</li>
-              <li><strong>市场冲击：</strong>标普 500 指数自高位回撤至 7,619 点附近，高估值科技股与半导体板块普遍承压，期权波动率急剧抬升。</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card-footer">
-          <span>信源：美联储决议 / 华尔街策略师</span>
-          <a class="source-link" href="https://cambridgecurrencies.com/next-federal-reserve-interest-rate-decision/" target="_blank">查看分析 →</a>
-        </div>
-      </div>
-
-      <!-- Card 4: Crypto & X Cashtags -->
-      <div class="card" data-category="finance">
-        <div>
-          <div class="card-top">
-            <span class="card-category cat-finance">加密货币 · 平台生态</span>
-            <span class="score-badge s-tier">★ 9.0 · S级生态</span>
-          </div>
-          <h2 class="card-title">比特币冲击 80,000 美元，X 平台联手交易所扩大 Cashtag 交易</h2>
-          <div class="tags">
-            <span class="tag">#BTC</span>
-            <span class="tag">#Cashtags</span>
-            <span class="tag">#Coinbase</span>
-            <span class="tag">#Kraken</span>
-          </div>
-          <div class="card-body">
-            <ul>
-              <li><strong>现货与杠杆齐升：</strong>比特币价格突破关键阻力位，衍生品市场杠杆率与机构现货托管增量同步放大。</li>
-              <li><strong>X 原生闭环：</strong>X 宣布联合 Coinbase 及主流券商升级 Cashtag 功能，用户可在推文流内直接呼出交易挂单，打通社媒到资产配置的入口。</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card-footer">
-          <span>信源：Bloomberg / X 官方动态</span>
-          <a class="source-link" href="https://bitcoinfoundation.org/news/companies/x-launches-us-cashtag-trading-with-coinbase-kraken-and-major-brokers/" target="_blank">查看报道 →</a>
-        </div>
-      </div>
-
-      <!-- Card 5: a16z Enterprise Software -->
-      <div class="card" data-category="vc">
-        <div>
-          <div class="card-top">
-            <span class="card-category cat-vc">风投动态 · a16z</span>
-            <span class="score-badge s-tier">★ 9.2 · S级风向</span>
-          </div>
-          <h2 class="card-title">Marc Andreessen：企业软件 VC 破 2600 亿美元，新增资本全归 AI</h2>
-          <div class="tags">
-            <span class="tag">#a16z</span>
-            <span class="tag">#MarcAndreessen</span>
-            <span class="tag">#EnterpriseAI</span>
-            <span class="tag">#VC</span>
-          </div>
-          <div class="card-body">
-            <ul>
-              <li><strong>算力吞噬世界：</strong>Marc Andreessen 在 X 发文称软件正以算力速度吞噬世界，2026 年企业软件风投总额突破 2670 亿美元，几乎所有增量均被 AI 智能体驱动的系统吸纳。</li>
-              <li><strong>早期格局重塑：</strong>种子轮与 A 轮中 AI 原生软件年化占比突破 325 亿美元，非 AI 传统 SaaS 赛道进一步边缘化。</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card-footer">
-          <span>信源：Marc Andreessen X 专栏 / Dealroom</span>
-          <a class="source-link" href="https://dealroom.co/news/x-2097762851788398971-marc-andreessen-software-will-eat-the-world-at-compute-speed-as-agents-w/" target="_blank">查看研报 →</a>
-        </div>
-      </div>
-
-      <!-- Card 6: Sequoia & Vertical AI -->
-      <div class="card" data-category="vc">
-        <div>
-          <div class="card-top">
-            <span class="card-category cat-vc">风投动态 · Sequoia & YC</span>
-            <span class="score-badge">★ 8.4 · A级风向</span>
-          </div>
-          <h2 class="card-title">Sequoia 与 Thrive 领投医疗 AI，YC 早期孵化全面转向无感 Agent</h2>
-          <div class="tags">
-            <span class="tag">#Sequoia</span>
-            <span class="tag">#Thrive</span>
-            <span class="tag">#YCombinator</span>
-            <span class="tag">#VerticalAI</span>
-          </div>
-          <div class="card-body">
-            <ul>
-              <li><strong>垂直壁垒下注：</strong>红杉参投医疗专业决策平台 OpenEvidence，彰显风投资本加速从基础模型转向具备强牌照与专有数据壁垒的垂直赛道。</li>
-              <li><strong>YC 早期模式转变：</strong>新一期入选项目中超过七成主打无人值守的全自主业务流程，极简团队利用 AI 实现完整商业交付。</li>
-            </ul>
-          </div>
-        </div>
-        <div class="card-footer">
-          <span>信源：硅谷投资人社群 / 融资动态</span>
-          <a class="source-link" href="https://medium.com/@vcnewsfr/zipline-humans-baseten-and-more-these-are-the-companies-that-raised-this-week-2026-week-3-51e1b7f83a69" target="_blank">查看动态 →</a>
-        </div>
-      </div>
+    <div class="feed-grid" id="feed-grid">
+      <div style="color: var(--text-muted); padding: 20px;">数据加载中...</div>
     </div>
   </div>
 
   <script>
+    // 异步加载纯数据 JSON 并渲染
+    async function loadDigest() {
+      try {
+        const res = await fetch('./data.json?t=' + new Date().getTime());
+        if (!res.ok) throw new Error("HTTP error " + res.status);
+        const data = await res.json();
+
+        // 渲染顶部数据
+        document.getElementById('header-subtitle').textContent = 
+          `采集窗口：${data.date} (${data.timezone || 'UTC+8'}) · 覆盖 AI 前沿、具身智能、金融宏观与顶级风险投资基金`;
+        document.getElementById('stat-total').textContent = `${data.stats.total} 篇精选`;
+        document.getElementById('stat-s').textContent = `${data.stats.s_tier} 项`;
+        document.getElementById('stat-a').textContent = `${data.stats.a_tier} 项`;
+        document.getElementById('stat-avg').textContent = `${data.stats.avg_score} / 10`;
+
+        // 渲染卡片列表
+        const grid = document.getElementById('feed-grid');
+        grid.innerHTML = data.items.map(item => `
+          <div class="card" data-category="${item.category}">
+            <div>
+              <div class="card-top">
+                <span class="card-category ${item.category_class || 'cat-ai'}">${item.category_name}</span>
+                <span class="score-badge ${item.score >= 9.0 ? 's-tier' : ''}">★ ${item.score} · ${item.tier}</span>
+              </div>
+              <h2 class="card-title">${item.title}</h2>
+              <div class="tags">
+                ${item.tags.map(t => `<span class="tag">#${t}</span>`).join('')}
+              </div>
+              <div class="card-body">
+                <ul>
+                  ${item.bullets.map(b => `<li>${b}</li>`).join('')}
+                </ul>
+              </div>
+            </div>
+            <div class="card-footer">
+              <span>信源：${item.source_title}</span>
+              <a class="source-link" href="${item.source_url}" target="_blank">查看报道 →</a>
+            </div>
+          </div>
+        `).join('');
+      } catch (err) {
+        console.error("加载数据失败:", err);
+        document.getElementById('feed-grid').innerHTML = 
+          `<div style="color: #f87171; padding: 20px;">数据加载失败，请检查 data.json 是否存在。</div>`;
+      }
+    }
+
     function filterCategory(cat) {
       const cards = document.querySelectorAll('.card');
       const buttons = document.querySelectorAll('.tab-btn');
@@ -422,6 +307,8 @@
         }
       });
     }
+
+    loadDigest();
   </script>
 </body>
 </html>
